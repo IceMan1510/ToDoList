@@ -3,7 +3,6 @@
   export let removeItem;
   export let i;
 </script>
-
 <div class="task">
   <div class="task-wrap">
     <input bind:checked={item.completed} type="checkbox" />
