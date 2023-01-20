@@ -1,8 +1,6 @@
 <script>
-  import Active from "./Blocks/active.svelte";
-  import All from "./Blocks/all.svelte";
-  import Completed from "./Blocks/completed.svelte";
-  import DateBlock from "./Blocks/date.svelte";
+  import Blocks from "./Blocks/blocks.svelte";
+
   import FooterButtons from "./Buttons/footerButtons.svelte";
   let newToDo = "";
   let block = "";
@@ -78,13 +76,13 @@
     </div>
     {#each todoLists as item, i}
       {#if block == "all"}
-        <All {item} {removeItem} {i} />
+        <Blocks {item} {removeItem} {i} />
       {:else if block === "active" && item.completed === true}
-        <Active {item} {removeItem} {i} />
+        <Blocks {item} {removeItem} {i} />
       {:else if block === "completed" && item.completed === false}
-        <Completed {item} {removeItem} {i} />
+        <Blocks {item} {removeItem} {i} />
       {:else if block === "date" && item.date === searchDate}
-        <DateBlock {todoLists} {item} {i} {removeItem} />
+        <Blocks {item} {i} {removeItem} />
       {/if}
     {/each}
     {#if todoLists.length > 0}
