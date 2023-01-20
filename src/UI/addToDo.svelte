@@ -92,6 +92,3 @@
     {/if}
   </div>
 </main>
-
-<style>
-</style>

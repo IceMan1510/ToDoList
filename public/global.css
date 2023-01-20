@@ -131,10 +131,12 @@ input[type="checkbox"] {
   zoom: 1.5;
   margin: auto;
   margin-left: 9px;
+  cursor: pointer;
 }
 .fa-trash:before {
   content: "\f1f8";
   margin-right: 20px;
+  cursor: pointer;
 }
 .bottom-buttons {
   display: flex;

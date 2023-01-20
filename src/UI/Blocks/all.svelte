@@ -1,9 +1,11 @@
 <script>
+  import { fade, fly, slide, scale } from "svelte/transition";
   export let item;
   export let removeItem;
   export let i;
 </script>
-<div class="task">
+
+<div class="task" transition:fly={{ x: 200, y: 0 }}>
   <div class="task-wrap">
     <input bind:checked={item.completed} type="checkbox" />
     <span class:checked={item.completed}>{item.title}</span>
