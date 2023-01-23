@@ -36,6 +36,7 @@
       return;
     }
   };
+
   const removeItem = (index) => {
     todoLists.splice(index, 1);
     todoLists = todoLists;
